@@ -582,6 +582,9 @@ ul { margin: 0; padding: 0; list-style: none; }
   border: 1px solid var(--line);
 }
 .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+/* Product shots are on white. Pin the tile white in both themes so packaging
+   reads as an object rather than glowing against a dark card. */
+.thumb:has(img) { background: #fff; border-color: var(--line-strong); }
 .thumb__code {
   font-size: var(--thumb-code, 12px);
   font-weight: 800;
