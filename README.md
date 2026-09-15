@@ -119,6 +119,17 @@ Address), not the product page URL — the script rejects anything that doesn't 
 as an image. To do them in a batch, fill in `scripts/product-image-sources.json` and run
 `--all`.
 
+If you already have the image on disk, skip the download entirely:
+
+```bash
+python3 scripts/import-images.py shot.jpg:rejuran other.png:aestura,aesturaLegs
+```
+
+Each argument is a path, a colon, then the product ids that should use it — a
+product bought twice shares one photo. Images are squared, resized to 320px and
+written as WebP; a shot on a plain white studio background has its dead margin
+trimmed first so the packaging fills the tile. Needs `pip install pillow`.
+
 Downloaded files land in `public/products/` and are registered in
 `src/data/productImages.json`, which the app imports. Commit both and the thumbnails go
 live on the next push. Nothing else needs changing.
