@@ -99,19 +99,12 @@ actually want the history to survive losing the phone.
 ## Deploying
 
 `.github/workflows/deploy.yml` builds on every push and publishes `dist/` to GitHub
-Pages. Two one-time settings changes are needed before the first run can succeed:
+Pages at `https://lbucio.github.io/my-grooming-routine/`.
 
-1. **Settings → General → Danger Zone → Change visibility → Public.**
-   Pages is not available for private repositories on the free plan.
-2. **Settings → Pages → Source → GitHub Actions.**
-
-The second step can't be automated: creating a Pages site through the API needs
-`administration: write`, and the default `GITHUB_TOKEN` cannot be granted that, so
-`configure-pages` with `enablement: true` fails with "Resource not accessible by
-integration".
-
-After both, push anything (or re-run the workflow) and it deploys to
-`https://lbucio.github.io/my-grooming-routine/`.
+`configure-pages` runs with `enablement: true`, so it provisions the Pages site itself
+on the first run and there is no settings step. This only works because the repository
+is public — Pages is unavailable on private repositories on the free plan, and the
+create call there is rejected as "Resource not accessible by integration".
 
 Making the repository public exposes the code and the product list. It does not expose
 anything you check off — that stays in your browser's own storage and never leaves the
