@@ -60,6 +60,10 @@ that is then left alone to dry — which a pillow undoes. All the hair steps are
 in the morning routine, not the night one, in application order: mask (mask days only),
 leave-in, sea salt spray and scrunch, oil on the ends, then air dry untouched.
 
+Wash mornings finish with the diffuser on low heat and low speed, then a cool shot to
+set the shape — ten minutes of that beats thirty minutes of air drying, because gravity
+has less time to pull the wave out.
+
 The curl cream is the definer and the sea salt spray is the refresher, so the morning
 forks on whether hair was washed. Mask days (Sun and Thu) run the wash-day sequence:
 mask, leave-in, curl cream on soaking wet hair, air dry, oil on dry ends. Every other

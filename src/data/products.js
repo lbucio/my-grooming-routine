@@ -262,6 +262,22 @@ export const PRODUCTS = {
       'Water-based, so it washes out with the Dokdo cleanser or plain water. No buildup to strip.'
     ]
   },
+  diffuser: {
+    id: 'diffuser',
+    code: 'DF',
+    name: 'Diffuser attachment',
+    sub: 'Low heat, low speed',
+    group: 'Hair',
+    what: 'Spreads the airflow so it dries the hair without blasting the clumps apart. The difference between a set wave and a dried one.',
+    use: 'Wash mornings, after the curl cream. Cup a section into the bowl, hold still 20–30 seconds, lower away, move to the next section.',
+    notes: [
+      'LOW heat and LOW speed. High speed is the single commonest mistake — it separates the clumps the cream just built.',
+      'Do not wave the diffuser around while a section is cupped. Movement is what makes frizz.',
+      'Tilt your head side to side, and forward, to get volume at the roots instead of a flat top.',
+      'Cool shot for the last pass at about 90% dry. Heat makes hair pliable, cooling is what sets the shape.',
+      'Ten minutes with this beats thirty minutes of air drying, because gravity has less time to pull the wave out.'
+    ]
+  },
   matteWax: {
     id: 'matteWax',
     code: 'MW',
