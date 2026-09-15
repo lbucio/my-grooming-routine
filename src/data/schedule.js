@@ -142,7 +142,7 @@ export function buildDay({ date, phaseId, outdoor, pureDiaStart }) {
             { id: 'am-mask', productId: 'unoveMask', title: 'UNOVE deep damage repair mask', detail: 'In the shower. Squeeze the water out first. Mid-lengths to ends only, off the scalp. 3–5 min, lukewarm rinse.', badge: 'Mask day' },
             { id: 'am-leavein', productId: 'unoveLeaveIn', title: 'UNOVE frizz calming leave-in', detail: 'Mid-lengths to ends while hair is still dripping. Protein — wash days only.' },
             { id: 'am-cream', productId: 'curlCream', title: 'Wet curl cream — scrunch', detail: 'On soaking wet hair, not damp. Rake through, then scrunch upward and hold. This is what makes the wave.', badge: 'Styling' },
-            { id: 'am-airdry', title: 'Air dry — hands off', detail: 'Do the rest of your routine while it dries. Touching a drying wave is what turns it into frizz.' },
+            { id: 'am-airdry', title: 'Air dry — hands off', detail: 'Do the rest of your routine while it dries. Touching a drying wave is what turns it into frizz, and leaving before it is bone dry is what makes it drop.' },
             { id: 'am-oil', productId: 'miseEnScene', title: 'Mise-en-scène Perfect Serum', detail: 'Once dry, one pump on the ends only. After drying, not before — oil on wet hair softens the hold.', optional: true, optionalNote: 'if the ends look dull' }
           ]
         : [
@@ -212,6 +212,14 @@ export function buildDay({ date, phaseId, outdoor, pureDiaStart }) {
               { id: 'pm-legs-lotion', productId: 'aesturaLegs', title: 'Aestura lotion over the mist', detail: 'The mist adds no moisture — this is what stops the tight, flaky look.' }
             ]
           : [{ id: 'pm-legs-lotion', productId: 'aesturaLegs', title: 'Aestura lotion — legs', detail: 'Off night. Lotion alone.' }])
+      ]
+    },
+    {
+      id: 'pm-hair-protect',
+      title: 'Hair',
+      note: 'Nothing goes on the hair at night — this is only about not undoing the morning. Skip it and the salt spray refresh has nothing left to revive.',
+      steps: [
+        { id: 'pm-pineapple', title: 'Pineapple it, or satin pillowcase', detail: 'Loose high ponytail on top of your head, or sleep on satin. Cotton drags the wave apart overnight; this is what makes day-two hair worth refreshing.', badge: 'Protect' }
       ]
     },
     {

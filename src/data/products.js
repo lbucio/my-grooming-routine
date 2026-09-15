@@ -249,14 +249,17 @@ export const PRODUCTS = {
   curlCream: {
     id: 'curlCream',
     code: 'CC',
-    name: 'Wet curl cream',
+    name: 'Dashu Wet Curl Cream',
     sub: 'The wave definer',
+    brand: 'Dashu',
     group: 'Hair',
-    what: 'Cream styler that clumps the wave pattern and holds it while it dries. Softer than gel — definition without a hard cast.',
+    what: 'Water-based cream styler, light to medium hold, glossy finish. Clumps the wave pattern and holds it while it dries.',
     use: 'Wash days. Soaking wet hair, not damp — rake through, then scrunch upward and hold. Air dry untouched.',
     notes: [
       'This is the defining product the kit was missing. Salt spray gives grit and volume; it does not clump a wave.',
-      'Too much turns greasy and drops the wave. Start with less than feels right and add on the next wash.'
+      'Light-to-medium hold is enough for a wave. Hold is rarely what makes a wave drop — touching it while it dries is.',
+      'Too much turns greasy and drops the wave. Start with less than feels right and add on the next wash.',
+      'Water-based, so it washes out with the Dokdo cleanser or plain water. No buildup to strip.'
     ]
   },
   matteWax: {
