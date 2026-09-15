@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import Thumb from './Thumb.jsx'
 import { PRODUCTS } from '../data/products.js'
 
 export default function ProductSheet({ productId, onClose }) {
@@ -23,10 +24,15 @@ export default function ProductSheet({ productId, onClose }) {
       <div className="sheet-backdrop" onClick={onClose} />
       <div className="sheet" role="dialog" aria-modal="true" aria-label={p.name}>
         <div className="sheet__grab" />
-        {p.brand && <div className="sheet__brand">{p.brand}</div>}
-        <h2 className="sheet__name">{p.name}</h2>
-        {p.sub && <div className="sheet__kr">{p.sub}</div>}
-        {p.korean && <div className="sheet__kr">{p.korean}</div>}
+        <div className="sheet__head">
+          <Thumb productId={p.id} size="lg" />
+          <div>
+            {p.brand && <div className="sheet__brand">{p.brand}</div>}
+            <h2 className="sheet__name">{p.name}</h2>
+            {p.sub && <div className="sheet__kr">{p.sub}</div>}
+            {p.korean && <div className="sheet__kr">{p.korean}</div>}
+          </div>
+        </div>
 
         <div className="sheet__label">What it is</div>
         <p className="sheet__text">{p.what}</p>

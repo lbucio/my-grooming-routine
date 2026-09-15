@@ -96,6 +96,40 @@ The honest read for this app: localStorage plus a JSON export covers everything 
 wanting the same checkmarks on a second device. Reach for a cloud DB only when you
 actually want the history to survive losing the phone.
 
+## Product photos
+
+Every product shows a thumbnail — in the step rows, in the Products list, and on the
+detail sheet. Until a real photo exists, it falls back to a monogram tile tinted by
+category, so the app looks finished with no images at all. Tapping a thumbnail opens
+that product's sheet.
+
+Photos are not in the repo. The environment this was built in blocks outbound requests
+to Olive Young, so they have to be fetched from your own machine:
+
+```bash
+node scripts/fetch-product-images.mjs --list
+# prints every product, with an Olive Young search URL for the ones still missing
+
+node scripts/fetch-product-images.mjs rejuran https://image.oliveyoung.co.kr/.../foo.jpg
+# downloads one, saves it to public/products/, and registers it
+```
+
+Copy the URL of the **image itself** (right-click the product photo → Copy Image
+Address), not the product page URL — the script rejects anything that doesn't come back
+as an image. To do them in a batch, fill in `scripts/product-image-sources.json` and run
+`--all`.
+
+Downloaded files land in `public/products/` and are registered in
+`src/data/productImages.json`, which the app imports. Commit both and the thumbnails go
+live on the next push. Nothing else needs changing.
+
+Worth knowing before you commit them: Olive Young's product photography belongs to them
+and the brands, and this repository is public, so committing the images redistributes
+them. For a personal routine app nobody is likely to care, but it is your call rather
+than mine. Screenshotting your own shelf sidesteps the question entirely — the script
+takes any URL, and any file you drop in `public/products/` named `<productId>.jpg` and
+listed in the registry works the same way.
+
 ## Deploying
 
 `.github/workflows/deploy.yml` builds on every push and publishes `dist/` to GitHub

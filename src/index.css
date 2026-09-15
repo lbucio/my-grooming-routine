@@ -570,3 +570,59 @@ ul { margin: 0; padding: 0; list-style: none; }
 @media (prefers-reduced-motion: reduce) {
   * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
 }
+
+/* ---------- product thumbnails ---------- */
+.thumb {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 9px;
+  background: var(--thumb-bg, var(--surface-2));
+  border: 1px solid var(--line);
+}
+.thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.thumb__code {
+  font-size: var(--thumb-code, 12px);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: var(--thumb-fg, var(--text-3));
+}
+
+.thumb--sm { width: 40px; height: 40px; --thumb-code: 13px; }
+.thumb--md { width: 50px; height: 50px; border-radius: 11px; --thumb-code: 15px; }
+.thumb--lg { width: 84px; height: 84px; border-radius: 16px; --thumb-code: 26px; }
+
+.thumb--cleanse    { --thumb-bg: var(--calm-soft);   --thumb-fg: var(--calm); }
+.thumb--treat      { --thumb-bg: var(--accent-soft); --thumb-fg: var(--accent); }
+.thumb--moisturize { --thumb-bg: var(--pm-soft);     --thumb-fg: var(--pm); }
+.thumb--protect    { --thumb-bg: var(--sun-soft);    --thumb-fg: var(--sun); }
+.thumb--body       { --thumb-bg: var(--am-soft);     --thumb-fg: var(--am); }
+.thumb--hair       { --thumb-bg: var(--accent-soft); --thumb-fg: var(--accent); }
+.thumb--teeth      { --thumb-bg: var(--surface-2);   --thumb-fg: var(--text-2); }
+
+/* A thumbnail in a step row sits between the check and the text. */
+.step__thumb {
+  flex: 0 0 auto;
+  align-self: center;
+  padding: 0;
+  border-radius: 9px;
+  position: relative;
+}
+.step__thumb:active { transform: scale(0.93); }
+/* A faint corner dot marks the photo as tappable without an extra control. */
+.step__thumb::after {
+  content: '';
+  position: absolute;
+  right: -2px;
+  bottom: -2px;
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: var(--text-3);
+  border: 2px solid var(--surface);
+}
+.step--done .step__thumb .thumb { opacity: 0.45; }
+.prod .thumb { margin-top: 1px; }
+.sheet__head { display: flex; gap: 14px; align-items: flex-start; }
+.sheet__head > div { flex: 1; min-width: 0; }

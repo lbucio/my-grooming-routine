@@ -5,6 +5,7 @@ export const PRODUCTS = {
   // ---------- FACE — treat ----------
   rejuran: {
     id: 'rejuran',
+    code: 'RJ',
     name: 'Rejuran Turnover Ampoule',
     sub: 'Gold',
     korean: '리쥬란 턴오버 앰플',
@@ -16,6 +17,7 @@ export const PRODUCTS = {
   },
   retinol: {
     id: 'retinol',
+    code: 'CX',
     name: 'COSRX The Retinol 0.1 Cream',
     korean: '코스알엑스 레티놀 0.1',
     brand: 'COSRX',
@@ -30,6 +32,7 @@ export const PRODUCTS = {
   },
   abibPads: {
     id: 'abibPads',
+    code: 'AB',
     name: 'Abib Green LHA Pore Pad',
     sub: 'Clear Touch',
     korean: '아비브 그린 LHA 포어 패드',
@@ -40,6 +43,7 @@ export const PRODUCTS = {
   },
   vitaminC: {
     id: 'vitaminC',
+    code: 'DA',
     name: 'Dr. Althea Vitamin C Boosting Serum',
     brand: 'Dr. Althea',
     group: 'Face — treat',
@@ -49,6 +53,7 @@ export const PRODUCTS = {
   },
   torridenSerum: {
     id: 'torridenSerum',
+    code: 'TD',
     name: 'Torriden Dive-In Serum',
     sub: 'Low Molecular Hyaluronic Acid — no SPF',
     korean: '토리든 다이브인 세럼',
@@ -62,6 +67,7 @@ export const PRODUCTS = {
   // ---------- FACE — cleanse ----------
   gokujyunOil: {
     id: 'gokujyunOil',
+    code: 'HL',
     name: 'Hada Labo Gokujyun Cleansing Oil',
     brand: 'Hada Labo (Rohto, Japan)',
     group: 'Face — cleanse',
@@ -70,6 +76,7 @@ export const PRODUCTS = {
   },
   bojBalm: {
     id: 'bojBalm',
+    code: 'BJ',
     name: 'Beauty of Joseon Radiance Cleansing Balm',
     brand: 'Beauty of Joseon',
     group: 'Face — cleanse',
@@ -78,6 +85,7 @@ export const PRODUCTS = {
   },
   dokdo: {
     id: 'dokdo',
+    code: 'RL',
     name: 'Round Lab 1025 Dokdo Cleanser',
     korean: '라운드랩 1025 독도 클렌저',
     brand: 'Round Lab',
@@ -90,6 +98,7 @@ export const PRODUCTS = {
   // ---------- FACE — moisturize ----------
   aestura: {
     id: 'aestura',
+    code: 'AE',
     name: 'Aestura Atobarrier365 Lotion',
     sub: '×2 — one for face, one for legs',
     brand: 'Aestura (Amorepacific)',
@@ -101,6 +110,7 @@ export const PRODUCTS = {
   // ---------- FACE — protect ----------
   skin1004Sun: {
     id: 'skin1004Sun',
+    code: 'SK',
     name: 'SKIN1004 Hyalu-Cica Water-Fit Sun Serum',
     sub: 'SPF50+ PA++++ · ×4',
     korean: '스킨천사 히알루 시카 워터핏 선세럼',
@@ -111,6 +121,7 @@ export const PRODUCTS = {
   },
   torridenSun: {
     id: 'torridenSun',
+    code: 'TS',
     name: 'Torriden Dive-In Sun Cream',
     sub: 'SPF — mornings only',
     brand: 'Torriden',
@@ -121,6 +132,7 @@ export const PRODUCTS = {
   },
   lrp: {
     id: 'lrp',
+    code: 'LR',
     name: 'La Roche-Posay Anthelios UV Mune 400',
     sub: 'SPF50+',
     brand: 'La Roche-Posay (France)',
@@ -130,6 +142,7 @@ export const PRODUCTS = {
   },
   bojStick: {
     id: 'bojStick',
+    code: 'BJ',
     name: 'Beauty of Joseon Matte Sun Stick',
     sub: 'Mugwort + Camellia · SPF50+',
     brand: 'Beauty of Joseon',
@@ -139,6 +152,7 @@ export const PRODUCTS = {
   },
   birchStick: {
     id: 'birchStick',
+    code: 'RL',
     name: 'Round Lab Birch Juice Sun Stick',
     sub: 'SPF50+ · 19g',
     korean: '자작나무 수분 선스틱',
@@ -151,6 +165,7 @@ export const PRODUCTS = {
   // ---------- TEETH ----------
   euthymol: {
     id: 'euthymol',
+    code: 'EU',
     name: 'Euthymol Whitening Purple Toothpaste',
     korean: '유시몰',
     brand: 'Euthymol (since 1898)',
@@ -161,6 +176,7 @@ export const PRODUCTS = {
   },
   pureDia: {
     id: 'pureDia',
+    code: 'PD',
     name: 'Liveorals PureDia Whitening Gel',
     korean: '퓨어디아',
     brand: 'Liveorals',
@@ -177,6 +193,7 @@ export const PRODUCTS = {
   // ---------- HAIR ----------
   unoveMask: {
     id: 'unoveMask',
+    code: 'UN',
     name: 'UNOVE Deep Damage Repair Hair Mask',
     sub: 'Tender Bloom · 320ml ×2',
     korean: '어노브 딥 데미지 리페어 헤어 마스크',
@@ -191,6 +208,7 @@ export const PRODUCTS = {
   },
   unoveLeaveIn: {
     id: 'unoveLeaveIn',
+    code: 'UN',
     name: 'UNOVE Frizz Calming Sleek Leave-in',
     brand: 'UNOVE',
     group: 'Hair',
@@ -200,6 +218,7 @@ export const PRODUCTS = {
   },
   miseEnScene: {
     id: 'miseEnScene',
+    code: 'MS',
     name: 'Mise-en-scène Perfect Serum',
     sub: 'Original (gold)',
     korean: '미장센 퍼펙트 세럼',
@@ -210,6 +229,7 @@ export const PRODUCTS = {
   },
   seaSalt: {
     id: 'seaSalt',
+    code: 'SS',
     name: 'Sea Salt Spray',
     korean: '씨솔트 스프레이',
     group: 'Hair',
@@ -221,6 +241,7 @@ export const PRODUCTS = {
   // ---------- BODY ----------
   bodyMist: {
     id: 'bodyMist',
+    code: 'SM',
     name: 'SOME BY MI Miracle Body Toner Mist',
     sub: 'AHA·BHA·PHA · 140ml',
     korean: '썸바이미 미라클 바디 토너 미스트',
@@ -232,6 +253,7 @@ export const PRODUCTS = {
   },
   bodyCleanser: {
     id: 'bodyCleanser',
+    code: 'SM',
     name: 'SOME BY MI Acne Clear Body Cleanser',
     sub: 'AHA·BHA·PHA · 400g',
     korean: '썸바이미 기적의 바디 클렌저',
@@ -242,6 +264,7 @@ export const PRODUCTS = {
   },
   aesturaLegs: {
     id: 'aesturaLegs',
+    code: 'AE',
     name: 'Aestura Atobarrier365 Lotion — legs',
     sub: 'The second bottle',
     brand: 'Aestura (Amorepacific)',

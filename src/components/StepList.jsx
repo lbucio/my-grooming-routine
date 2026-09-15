@@ -1,3 +1,5 @@
+import Thumb from './Thumb.jsx'
+
 const Tick = () => (
   <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
     <path d="M2 8.5 6 12.5 14 3.5" stroke="#fff" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" />
@@ -42,8 +44,12 @@ export default function StepList({ groups, isDone, onToggle, onOpenProduct }) {
                     </span>
                   </button>
                   {step.productId && (
-                    <button className="step__info" onClick={() => onOpenProduct(step.productId)} aria-label={`About ${step.title}`}>
-                      i
+                    <button
+                      className="step__thumb"
+                      onClick={() => onOpenProduct(step.productId)}
+                      aria-label={`About ${step.title}`}
+                    >
+                      <Thumb productId={step.productId} size="sm" />
                     </button>
                   )}
                 </div>

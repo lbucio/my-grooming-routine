@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Thumb from './Thumb.jsx'
 import { PRODUCTS, PRODUCT_GROUPS } from '../data/products.js'
 import { clearAll, STORAGE_BACKEND } from '../lib/storage.js'
 
@@ -66,6 +67,7 @@ export default function ProductsView({ onOpenProduct, pureDiaStart, setPureDiaSt
           <div className="card">
             {items.map((p) => (
               <button key={p.id} className="prod" onClick={() => onOpenProduct(p.id)}>
+                <Thumb productId={p.id} size="md" />
                 <span style={{ flex: 1, minWidth: 0 }}>
                   <span className="prod__name" style={{ display: 'block' }}>
                     {p.name}
