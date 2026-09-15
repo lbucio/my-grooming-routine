@@ -73,6 +73,7 @@ export default function ProductsView({ onOpenProduct, pureDiaStart, setPureDiaSt
                     {p.name}
                   </span>
                   {p.owned === false && <span className="pill pill--quiet" style={{ marginTop: 4 }}>Don't own it</span>}
+                  {p.inRoutine === false && <span className="pill pill--quiet" style={{ marginTop: 4 }}>Not in the routine</span>}
                   {p.sub && <span className="prod__sub" style={{ display: 'block' }}>{p.sub}</span>}
                   {p.korean && <span className="prod__kr" style={{ display: 'block' }}>{p.korean}</span>}
                 </span>

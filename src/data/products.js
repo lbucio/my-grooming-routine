@@ -246,6 +246,33 @@ export const PRODUCTS = {
     what: 'Leave-in oil serum. The Korean classic hair oil.',
     use: 'Two pumps on damp ends. Layer after the leave-in.'
   },
+  curlCream: {
+    id: 'curlCream',
+    code: 'CC',
+    name: 'Wet curl cream',
+    sub: 'The wave definer',
+    group: 'Hair',
+    what: 'Cream styler that clumps the wave pattern and holds it while it dries. Softer than gel — definition without a hard cast.',
+    use: 'Wash days. Soaking wet hair, not damp — rake through, then scrunch upward and hold. Air dry untouched.',
+    notes: [
+      'This is the defining product the kit was missing. Salt spray gives grit and volume; it does not clump a wave.',
+      'Too much turns greasy and drops the wave. Start with less than feels right and add on the next wash.'
+    ]
+  },
+  matteWax: {
+    id: 'matteWax',
+    code: 'MW',
+    name: 'Matte wax',
+    sub: 'Not in the wave routine',
+    inRoutine: false,
+    group: 'Hair',
+    what: 'Dry-hair wax for separation and piece-y texture.',
+    use: 'Not for waves — it clumps sections flat and breaks the pattern, which is why the notes say to avoid wax.',
+    notes: [
+      'Keep it for a different look entirely — slicked back, or short piece-y styling.',
+      'The one exception: a trace warmed between the palms, smoothed over dry flyaways at the end. Nowhere near the lengths.'
+    ]
+  },
   seaSalt: {
     id: 'seaSalt',
     code: 'SS',
@@ -253,8 +280,11 @@ export const PRODUCTS = {
     korean: '씨솔트 스프레이',
     group: 'Hair',
     what: 'Texturizing spray, light hold, matte finish.',
-    use: 'Damp hair, scrunch upward, air dry. This is what defines the wave pattern.',
-    notes: ['Avoid gel, strong wax, hairspray — all three fight waves.']
+    use: 'Non-wash mornings. Mist hair damp again, scrunch upward, air dry — this is the refresher, not the definer.',
+    notes: [
+      'Demoted from wave-maker to refresher now the curl cream is in the routine. Salt adds grit and volume; cream makes the clump.',
+      'Salt is drying. Every morning on top of wash-day cream is too much — keep it for day two and three.'
+    ]
   },
 
   // ---------- BODY ----------

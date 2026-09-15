@@ -60,9 +60,18 @@ that is then left alone to dry — which a pillow undoes. All the hair steps are
 in the morning routine, not the night one, in application order: mask (mask days only),
 leave-in, sea salt spray and scrunch, oil on the ends, then air dry untouched.
 
-The leave-in is protein and so is the mask, so the leave-in is marked wash-day-only
-rather than daily; using it every morning on top of two mask days risks the protein
-overload the product notes warn about. The salt spray is the one daily step.
+The curl cream is the definer and the sea salt spray is the refresher, so the morning
+forks on whether hair was washed. Mask days (Sun and Thu) run the wash-day sequence:
+mask, leave-in, curl cream on soaking wet hair, air dry, oil on dry ends. Every other
+morning runs the refresh: mist damp, salt spray, scrunch, air dry.
+
+The leave-in is protein and so is the mask, so it is wash-day-only rather than daily;
+using it every morning on top of two mask days risks the protein overload the product
+notes warn about.
+
+The matte wax is owned but deliberately outside the routine — wax clumps sections flat
+and breaks a wave pattern. It is listed flagged "Not in the routine" so the question
+does not come up twice.
 
 If you shower at night, do the mask, leave-in and oil then, and re-dampen with water in
 the morning for the salt spray and the scrunch. The Hair section says so in the app.

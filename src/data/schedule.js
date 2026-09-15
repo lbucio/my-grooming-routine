@@ -134,16 +134,23 @@ export function buildDay({ date, phaseId, outdoor, pureDiaStart }) {
     {
       id: 'am-hair',
       title: 'Hair',
-      note: 'Wash at night instead? Do the mask, leave-in and oil then — but save the salt spray and the scrunch for the morning, on hair re-dampened with water.',
-      steps: [
-        ...(mask
-          ? [{ id: 'am-mask', productId: 'unoveMask', title: 'UNOVE deep damage repair mask', detail: 'In the shower. Squeeze the water out first. Mid-lengths to ends only, off the scalp. 3–5 min, lukewarm rinse.', badge: 'Mask day' }]
-          : []),
-        { id: 'am-leavein', productId: 'unoveLeaveIn', title: 'UNOVE frizz calming leave-in', detail: 'Mid-lengths to ends while hair is still dripping. Protein — wash days only, not every morning.', optional: !mask, optionalNote: mask ? undefined : 'wash day only' },
-        { id: 'am-salt', productId: 'seaSalt', title: 'Sea salt spray — scrunch', detail: 'Damp hair, spray through the mids, scrunch upward in your palm and hold. This is the step that makes the wave.', badge: 'Styling' },
-        { id: 'am-oil', productId: 'miseEnScene', title: 'Mise-en-scène Perfect Serum', detail: 'One or two pumps, ends only, after the scrunch. More than that and the wave drops.' },
-        { id: 'am-airdry', title: 'Air dry — hands off', detail: 'Do the rest of your routine while it dries. Touching a drying wave is what turns it into frizz.' }
-      ]
+      note: mask
+        ? 'Wash at night instead? Mask and leave-in then, but the curl cream and the scrunch need the morning — re-wet properly first, not just a mist.'
+        : 'Washed this morning anyway? Use the curl cream on soaking wet hair instead of the salt spray, and skip the leave-in unless it is a mask day.',
+      steps: mask
+        ? [
+            { id: 'am-mask', productId: 'unoveMask', title: 'UNOVE deep damage repair mask', detail: 'In the shower. Squeeze the water out first. Mid-lengths to ends only, off the scalp. 3–5 min, lukewarm rinse.', badge: 'Mask day' },
+            { id: 'am-leavein', productId: 'unoveLeaveIn', title: 'UNOVE frizz calming leave-in', detail: 'Mid-lengths to ends while hair is still dripping. Protein — wash days only.' },
+            { id: 'am-cream', productId: 'curlCream', title: 'Wet curl cream — scrunch', detail: 'On soaking wet hair, not damp. Rake through, then scrunch upward and hold. This is what makes the wave.', badge: 'Styling' },
+            { id: 'am-airdry', title: 'Air dry — hands off', detail: 'Do the rest of your routine while it dries. Touching a drying wave is what turns it into frizz.' },
+            { id: 'am-oil', productId: 'miseEnScene', title: 'Mise-en-scène Perfect Serum', detail: 'Once dry, one pump on the ends only. After drying, not before — oil on wet hair softens the hold.', optional: true, optionalNote: 'if the ends look dull' }
+          ]
+        : [
+            { id: 'am-leavein', productId: 'unoveLeaveIn', title: 'UNOVE frizz calming leave-in', detail: 'Protein, and the mask is too. Wash days only, not every morning.', optional: true, optionalNote: 'wash day only' },
+            { id: 'am-salt', productId: 'seaSalt', title: 'Sea salt spray — refresh', detail: 'Mist the mids damp again, scrunch upward and hold. Reviving yesterday\'s wave, not building a new one.', badge: 'Refresh' },
+            { id: 'am-airdry', title: 'Air dry — hands off', detail: 'Leave it completely alone until dry. Every touch on a drying wave is frizz.' },
+            { id: 'am-oil', productId: 'miseEnScene', title: 'Mise-en-scène Perfect Serum', detail: 'Once dry, one pump on the ends only.', optional: true, optionalNote: 'if the ends look dull' }
+          ]
     },
     {
       id: 'am-teeth',
