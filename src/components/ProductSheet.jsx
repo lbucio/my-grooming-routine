@@ -34,6 +34,13 @@ export default function ProductSheet({ productId, onClose }) {
           </div>
         </div>
 
+        {p.amount && (
+          <div className="sheet__amount">
+            <div className="sheet__amount-label">How much</div>
+            <div className="sheet__amount-value">{p.amount}</div>
+          </div>
+        )}
+
         <div className="sheet__label">What it is</div>
         <p className="sheet__text">{p.what}</p>
 

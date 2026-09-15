@@ -317,6 +317,18 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 .step__body { flex: 1; min-width: 0; }
 .step__detail { display: block; }
+/* The dose, where getting it wrong costs something. */
+.step__amount {
+  display: block;
+  margin-top: 5px;
+  padding-left: 9px;
+  border-left: 2px solid var(--accent);
+  font-size: 12.5px;
+  line-height: 1.4;
+  font-weight: 600;
+  color: var(--accent);
+}
+.step--done .step__amount { color: var(--text-3); border-left-color: var(--line-strong); font-weight: 400; }
 .step__top { display: flex; align-items: center; gap: 7px; flex-wrap: wrap; }
 .step__title { font-size: 15.5px; font-weight: 600; letter-spacing: -0.01em; line-height: 1.3; }
 .step--done .step__title { color: var(--text-3); text-decoration: line-through; }
@@ -499,6 +511,21 @@ ul { margin: 0; padding: 0; list-style: none; }
 .sheet__brand { font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); }
 .sheet__name { font-size: 21px; font-weight: 700; letter-spacing: -0.02em; margin-top: 4px; }
 .sheet__kr { font-size: 14px; color: var(--text-3); margin-top: 3px; }
+.sheet__amount {
+  margin-top: 18px;
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  background: var(--accent-soft);
+}
+.sheet__amount-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.sheet__amount-value { font-size: 15px; line-height: 1.45; font-weight: 600; color: var(--text); margin-top: 4px; }
+
 .sheet__label { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-3); margin: 18px 0 5px; }
 .sheet__text { font-size: 14.5px; line-height: 1.5; color: var(--text); }
 .sheet__notes li { font-size: 13.5px; line-height: 1.5; color: var(--text-2); display: flex; gap: 8px; margin-top: 7px; }

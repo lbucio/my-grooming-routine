@@ -5,7 +5,9 @@ export const PRODUCTS = {
   // ---------- FACE — treat ----------
   rejuran: {
     id: 'rejuran',
+    doseSensitive: true,
     code: 'RJ',
+    amount: 'One full pump (10ml bottle) or 3–4 drops (5ml dropper).',
     name: 'Rejuran Turnover Ampoule',
     sub: 'Dual Effect · DOT Dual PDRN · 10ml + 5ml',
     korean: '리쥬란 턴오버 앰플',
@@ -17,7 +19,9 @@ export const PRODUCTS = {
   },
   poreAmpoule: {
     id: 'poreAmpoule',
+    doseSensitive: true,
     code: 'RP',
+    amount: '2–3 drops. Nose and cheeks only, not the whole face.',
     name: 'Rejuran Pore Tightening Ampoule',
     sub: 'PDRx 5% · c-PDRN 0.5%',
     brand: 'Rejuran',
@@ -32,7 +36,9 @@ export const PRODUCTS = {
   },
   retinol: {
     id: 'retinol',
+    doseSensitive: true,
     code: 'CX',
+    amount: 'One pea for the whole face. Not per zone — one pea total.',
     name: 'COSRX The Retinol 0.1 Cream',
     korean: '코스알엑스 레티놀 0.1',
     brand: 'COSRX',
@@ -47,7 +53,9 @@ export const PRODUCTS = {
   },
   abibPads: {
     id: 'abibPads',
+    doseSensitive: true,
     code: 'AB',
+    amount: 'One pad. Never two, and never a second pass.',
     name: 'Abib Green LHA Pore Pad',
     sub: 'Clear Touch',
     korean: '아비브 그린 LHA 포어 패드',
@@ -58,7 +66,9 @@ export const PRODUCTS = {
   },
   vitaminC: {
     id: 'vitaminC',
+    doseSensitive: true,
     code: 'DA',
+    amount: '3–4 drops.',
     name: 'Dr. Althea Vitamin C Boosting Serum',
     brand: 'Dr. Althea',
     group: 'Face — treat',
@@ -69,6 +79,7 @@ export const PRODUCTS = {
   torridenSerum: {
     id: 'torridenSerum',
     code: 'TD',
+    amount: 'Would be 3–4 drops — not owned.',
     name: 'Torriden Dive-In Serum',
     sub: 'Not in the haul — the routine skips it',
     owned: false,
@@ -87,6 +98,7 @@ export const PRODUCTS = {
   gokujyunOil: {
     id: 'gokujyunOil',
     code: 'HL',
+    amount: '2–3 pumps on dry skin.',
     name: 'Hada Labo Gokujyun Cleansing Oil',
     brand: 'Hada Labo (Rohto, Japan)',
     group: 'Face — cleanse',
@@ -96,6 +108,7 @@ export const PRODUCTS = {
   bojBalm: {
     id: 'bojBalm',
     code: 'BJ',
+    amount: 'A scoop the size of a large pea.',
     name: 'Beauty of Joseon Radiance Cleansing Balm',
     brand: 'Beauty of Joseon',
     group: 'Face — cleanse',
@@ -105,6 +118,7 @@ export const PRODUCTS = {
   dokdo: {
     id: 'dokdo',
     code: 'RL',
+    amount: 'An almond-sized squeeze, lathered in wet hands first.',
     name: 'Round Lab 1025 Dokdo Cleanser',
     korean: '라운드랩 1025 독도 클렌저',
     brand: 'Round Lab',
@@ -118,6 +132,7 @@ export const PRODUCTS = {
   aestura: {
     id: 'aestura',
     code: 'AE',
+    amount: 'A large pea for face and neck.',
     name: 'Aestura Atobarrier365 Lotion',
     sub: '×2 — one for face, one for legs',
     brand: 'Aestura (Amorepacific)',
@@ -129,7 +144,9 @@ export const PRODUCTS = {
   // ---------- FACE — protect ----------
   skin1004Sun: {
     id: 'skin1004Sun',
+    doseSensitive: true,
     code: 'SK',
+    amount: 'Two finger-lengths — index and middle, base to tip. Face and neck.',
     name: 'SKIN1004 Hyalu-Cica Water-Fit Sun Serum',
     sub: 'SPF50+ PA++++ · ×4',
     korean: '스킨천사 히알루 시카 워터핏 선세럼',
@@ -140,7 +157,9 @@ export const PRODUCTS = {
   },
   torridenSun: {
     id: 'torridenSun',
+    doseSensitive: true,
     code: 'TS',
+    amount: 'Two finger-lengths, same as the SKIN1004.',
     name: 'Torriden Dive-In Sun Cream',
     sub: 'SPF — mornings only',
     brand: 'Torriden',
@@ -151,7 +170,9 @@ export const PRODUCTS = {
   },
   lrp: {
     id: 'lrp',
+    doseSensitive: true,
     code: 'LR',
+    amount: 'Two finger-lengths. Reapply the same amount every 2 hours outdoors.',
     name: 'La Roche-Posay Anthelios UV Mune 400',
     sub: 'SPF50+',
     brand: 'La Roche-Posay (France)',
@@ -161,7 +182,9 @@ export const PRODUCTS = {
   },
   bojStick: {
     id: 'bojStick',
+    doseSensitive: true,
     code: 'BJ',
+    amount: 'Four passes back and forth over each area, not one.',
     name: 'Beauty of Joseon Matte Sun Stick',
     sub: 'Mugwort + Camellia · SPF50+',
     brand: 'Beauty of Joseon',
@@ -171,7 +194,9 @@ export const PRODUCTS = {
   },
   birchStick: {
     id: 'birchStick',
+    doseSensitive: true,
     code: 'RL',
+    amount: 'Four passes per shin, back and forth, until it visibly sheens.',
     name: 'Round Lab Birch Juice Sun Stick',
     sub: 'SPF50+ · 19g',
     korean: '자작나무 수분 선스틱',
@@ -185,6 +210,7 @@ export const PRODUCTS = {
   euthymol: {
     id: 'euthymol',
     code: 'EU',
+    amount: 'A pea. The full strip on the ads is marketing.',
     name: 'Euthymol Whitening Purple Toothpaste',
     korean: '유시몰',
     brand: 'Euthymol (since 1898)',
@@ -196,6 +222,7 @@ export const PRODUCTS = {
   pureDia: {
     id: 'pureDia',
     code: 'PD',
+    amount: 'Follow the tube — the instructions are Korean-only, so translate before the first use rather than guessing.',
     name: 'Liveorals PureDia Whitening Gel',
     korean: '퓨어디아',
     brand: 'Liveorals',
@@ -213,6 +240,7 @@ export const PRODUCTS = {
   unoveMask: {
     id: 'unoveMask',
     code: 'UN',
+    amount: 'Two pumps, or a walnut. Mid-lengths to ends only.',
     name: 'UNOVE Deep Damage Repair Hair Mask',
     sub: 'Tender Bloom · 320ml ×2',
     korean: '어노브 딥 데미지 리페어 헤어 마스크',
@@ -228,6 +256,7 @@ export const PRODUCTS = {
   unoveLeaveIn: {
     id: 'unoveLeaveIn',
     code: 'UN',
+    amount: '1–2 pumps, ends up. Protein, so wash days only.',
     name: 'UNOVE Frizz Calming Sleek Leave-in',
     brand: 'UNOVE',
     group: 'Hair',
@@ -238,6 +267,7 @@ export const PRODUCTS = {
   miseEnScene: {
     id: 'miseEnScene',
     code: 'MS',
+    amount: 'One pump on dry ends. Two only if hair is long and damp.',
     name: 'Mise-en-scène Perfect Serum',
     sub: 'Original (gold)',
     korean: '미장센 퍼펙트 세럼',
@@ -248,7 +278,9 @@ export const PRODUCTS = {
   },
   curlCream: {
     id: 'curlCream',
+    doseSensitive: true,
     code: 'CC',
+    amount: 'Start with a coin-sized blob for the first wash, then adjust up.',
     name: 'Dashu Wet Curl Cream',
     sub: 'The wave definer',
     brand: 'Dashu',
@@ -281,6 +313,7 @@ export const PRODUCTS = {
   matteWax: {
     id: 'matteWax',
     code: 'MW',
+    amount: 'A trace, warmed between the palms. Flyaways only.',
     name: 'Matte wax',
     sub: 'Not in the wave routine',
     inRoutine: false,
@@ -295,6 +328,7 @@ export const PRODUCTS = {
   seaSalt: {
     id: 'seaSalt',
     code: 'SS',
+    amount: '5–8 sprays through the mids, then scrunch.',
     name: 'Sea Salt Spray',
     korean: '씨솔트 스프레이',
     group: 'Hair',
@@ -309,7 +343,9 @@ export const PRODUCTS = {
   // ---------- BODY ----------
   bodyMist: {
     id: 'bodyMist',
+    doseSensitive: true,
     code: 'SM',
+    amount: '5–6 sprays per leg — visibly damp, not running. Dry one minute.',
     name: 'SOME BY MI Miracle Body Toner Mist',
     sub: 'AHA·BHA·PHA · 140ml',
     korean: '썸바이미 미라클 바디 토너 미스트',
@@ -322,6 +358,7 @@ export const PRODUCTS = {
   bodyCleanser: {
     id: 'bodyCleanser',
     code: 'SM',
+    amount: 'Two pumps for legs, back and shoulders.',
     name: 'SOME BY MI Acne Clear Body Cleanser',
     sub: 'AHA·BHA·PHA · 400g',
     korean: '썸바이미 기적의 바디 클렌저',
@@ -333,6 +370,7 @@ export const PRODUCTS = {
   aesturaLegs: {
     id: 'aesturaLegs',
     code: 'AE',
+    amount: 'A coin-sized blob per shin, more if they still feel tight.',
     name: 'Aestura Atobarrier365 Lotion — legs',
     sub: 'The second bottle',
     brand: 'Aestura (Amorepacific)',

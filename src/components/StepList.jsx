@@ -1,4 +1,5 @@
 import Thumb from './Thumb.jsx'
+import { PRODUCTS } from '../data/products.js'
 
 const Tick = () => (
   <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
@@ -41,6 +42,9 @@ export default function StepList({ groups, isDone, onToggle, onOpenProduct }) {
                         {step.optional && <span className="step__opt">{step.optionalNote || 'optional'}</span>}
                       </span>
                       <span className="step__detail">{step.detail}</span>
+                      {PRODUCTS[step.productId]?.doseSensitive && (
+                        <span className="step__amount">{PRODUCTS[step.productId].amount}</span>
+                      )}
                     </span>
                   </button>
                   {step.productId && (
