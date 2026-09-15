@@ -31,8 +31,10 @@
   color-scheme: light dark;
 }
 
+/* Dark tokens apply in three states: an explicit dark stamp, a dark OS with no
+   stamp, and never when the viewer has explicitly chosen light. */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme='light']) {
     --bg: #14120f;
     --surface: #1e1b18;
     --surface-2: #272320;
@@ -55,6 +57,30 @@
 
     --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 6px 16px rgba(0, 0, 0, 0.3);
   }
+}
+
+:root[data-theme='dark'] {
+  --bg: #14120f;
+  --surface: #1e1b18;
+  --surface-2: #272320;
+  --line: #322d28;
+  --line-strong: #453e37;
+  --text: #f2ece5;
+  --text-2: #a89e93;
+  --text-3: #7c7268;
+
+  --accent: #5fc3a5;
+  --accent-soft: #1b3831;
+  --am: #e0a959;
+  --am-soft: #3a2d16;
+  --pm: #9a9ae0;
+  --pm-soft: #26264a;
+  --sun: #eb8f5f;
+  --sun-soft: #3d2416;
+  --calm: #7fb6dc;
+  --calm-soft: #1a2c39;
+
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 6px 16px rgba(0, 0, 0, 0.3);
 }
 
 /* ---------- reset ---------- */
@@ -538,7 +564,8 @@ ul { margin: 0; padding: 0; list-style: none; }
   min-height: 38px;
 }
 .danger { color: #c0392b; font-weight: 650; }
-@media (prefers-color-scheme: dark) { .danger { color: #ff7a6b; } }
+@media (prefers-color-scheme: dark) { :root:not([data-theme='light']) .danger { color: #ff7a6b; } }
+:root[data-theme='dark'] .danger { color: #ff7a6b; }
 
 @media (prefers-reduced-motion: reduce) {
   * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }

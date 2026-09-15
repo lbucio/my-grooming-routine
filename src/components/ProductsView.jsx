@@ -1,7 +1,10 @@
+import { useState } from 'react'
 import { PRODUCTS, PRODUCT_GROUPS } from '../data/products.js'
 import { clearAll, STORAGE_BACKEND } from '../lib/storage.js'
 
 export default function ProductsView({ onOpenProduct, pureDiaStart, setPureDiaStart }) {
+  // Two-tap confirm rather than window.confirm(), which sandboxed frames block outright.
+  const [armed, setArmed] = useState(false)
   const byGroup = PRODUCT_GROUPS.map((g) => ({
     group: g,
     items: Object.values(PRODUCTS).filter((p) => p.group === g)
@@ -29,20 +32,31 @@ export default function ProductsView({ onOpenProduct, pureDiaStart, setPureDiaSt
           <div className="setting__text">
             <div className="setting__title">Reset everything</div>
             <div className="setting__note">
-              Clears checks, outdoor days and settings from this device's {STORAGE_BACKEND} storage.
+              {armed
+                ? 'Tap Confirm to clear every check, outdoor day and setting on this device.'
+                : `Clears checks, outdoor days and settings from this device's ${STORAGE_BACKEND} storage.`}
             </div>
           </div>
-          <button
-            className="danger"
-            onClick={() => {
-              if (confirm('Clear all checks, outdoor days and settings?')) {
-                clearAll()
-                location.reload()
-              }
-            }}
-          >
-            Reset
-          </button>
+          {armed ? (
+            <span style={{ display: 'flex', gap: 8, flex: '0 0 auto' }}>
+              <button onClick={() => setArmed(false)} style={{ color: 'var(--text-2)', fontWeight: 600 }}>
+                Cancel
+              </button>
+              <button
+                className="danger"
+                onClick={() => {
+                  clearAll()
+                  location.reload()
+                }}
+              >
+                Confirm
+              </button>
+            </span>
+          ) : (
+            <button className="danger" onClick={() => setArmed(true)}>
+              Reset
+            </button>
+          )}
         </div>
       </div>
 
