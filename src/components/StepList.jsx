@@ -55,6 +55,7 @@ export default function StepList({ groups, isDone, onToggle, onOpenProduct }) {
                 </div>
               ))}
             </div>
+            {group.note && <p className="group__note">{group.note}</p>}
           </section>
         )
       })}

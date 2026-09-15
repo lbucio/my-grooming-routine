@@ -57,7 +57,7 @@ export default function WeeklyView({
       </div>
 
       <div className="section-title">
-        Nights · tap ☀️ for a day in the sun
+        Days · tap ☀️ for a day in the sun
         {outdoorCount > 0 && ` · ${outdoorCount} flagged`}
       </div>
       <div className="card">
@@ -120,7 +120,7 @@ export default function WeeklyView({
         <table className="glance">
           <thead>
             <tr>
-              <th>Night</th>
+              <th>Day</th>
               <th>Face active</th>
               <th>Legs</th>
               <th>Hair</th>

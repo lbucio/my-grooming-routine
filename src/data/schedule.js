@@ -132,6 +132,20 @@ export function buildDay({ date, phaseId, outdoor, pureDiaStart }) {
       ]
     },
     {
+      id: 'am-hair',
+      title: 'Hair',
+      note: 'Wash at night instead? Do the mask, leave-in and oil then — but save the salt spray and the scrunch for the morning, on hair re-dampened with water.',
+      steps: [
+        ...(mask
+          ? [{ id: 'am-mask', productId: 'unoveMask', title: 'UNOVE deep damage repair mask', detail: 'In the shower. Squeeze the water out first. Mid-lengths to ends only, off the scalp. 3–5 min, lukewarm rinse.', badge: 'Mask day' }]
+          : []),
+        { id: 'am-leavein', productId: 'unoveLeaveIn', title: 'UNOVE frizz calming leave-in', detail: 'Mid-lengths to ends while hair is still dripping. Protein — wash days only, not every morning.', optional: !mask, optionalNote: mask ? undefined : 'wash day only' },
+        { id: 'am-salt', productId: 'seaSalt', title: 'Sea salt spray — scrunch', detail: 'Damp hair, spray through the mids, scrunch upward in your palm and hold. This is the step that makes the wave.', badge: 'Styling' },
+        { id: 'am-oil', productId: 'miseEnScene', title: 'Mise-en-scène Perfect Serum', detail: 'One or two pumps, ends only, after the scrunch. More than that and the wave drops.' },
+        { id: 'am-airdry', title: 'Air dry — hands off', detail: 'Do the rest of your routine while it dries. Touching a drying wave is what turns it into frizz.' }
+      ]
+    },
+    {
       id: 'am-teeth',
       title: 'Teeth',
       steps: [
@@ -192,22 +206,6 @@ export function buildDay({ date, phaseId, outdoor, pureDiaStart }) {
             ]
           : [{ id: 'pm-legs-lotion', productId: 'aesturaLegs', title: 'Aestura lotion — legs', detail: 'Off night. Lotion alone.' }])
       ]
-    },
-    {
-      id: 'pm-hair',
-      title: 'Hair',
-      steps: mask
-        ? [
-            { id: 'pm-mask', productId: 'unoveMask', title: 'UNOVE deep damage repair mask', detail: 'Damp hair, squeeze out excess water. Mid-lengths to ends only, off the scalp. 3–5 min, lukewarm rinse.', badge: 'Mask night' },
-            { id: 'pm-leavein', productId: 'unoveLeaveIn', title: 'UNOVE frizz calming leave-in', detail: 'Damp hair, mid-lengths to ends.' },
-            { id: 'pm-oil', productId: 'miseEnScene', title: 'Mise-en-scène Perfect Serum', detail: 'Two pumps on damp ends, after the leave-in.' },
-            { id: 'pm-salt', productId: 'seaSalt', title: 'Sea salt spray', detail: 'Scrunch upward, air dry. This is what defines the wave.' }
-          ]
-        : [
-            { id: 'pm-leavein', productId: 'unoveLeaveIn', title: 'UNOVE frizz calming leave-in', detail: 'Damp hair, mid-lengths to ends.', optional: true, optionalNote: 'wash day only' },
-            { id: 'pm-oil', productId: 'miseEnScene', title: 'Mise-en-scène Perfect Serum', detail: 'Two pumps on damp ends.', optional: true, optionalNote: 'wash day only' },
-            { id: 'pm-salt', productId: 'seaSalt', title: 'Sea salt spray', detail: 'Scrunch upward, air dry.', optional: true, optionalNote: 'wash day only' }
-          ]
     },
     {
       id: 'pm-teeth',

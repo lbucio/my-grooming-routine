@@ -53,6 +53,20 @@ The serum stays in the Products list flagged "Don't own it", so if it ever gets 
 the step can come back. Set `owned` back to true in `src/data/products.js` and re-add
 the `am-torriden` / `pm-torriden` steps in `src/data/schedule.js`.
 
+## Hair sits in the morning
+
+Wavy hair sets in whatever shape it dries in, so styling has to happen on damp hair
+that is then left alone to dry — which a pillow undoes. All the hair steps are therefore
+in the morning routine, not the night one, in application order: mask (mask days only),
+leave-in, sea salt spray and scrunch, oil on the ends, then air dry untouched.
+
+The leave-in is protein and so is the mask, so the leave-in is marked wash-day-only
+rather than daily; using it every morning on top of two mask days risks the protein
+overload the product notes warn about. The salt spray is the one daily step.
+
+If you shower at night, do the mask, leave-in and oil then, and re-dampen with water in
+the morning for the salt spray and the scrunch. The Hair section says so in the app.
+
 ## Face active schedule
 
 Three phases, switched from the week view. Friday and Saturday nights stay calm in all
