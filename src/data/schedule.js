@@ -97,7 +97,7 @@ export function buildDay({ date, phaseId, outdoor, pureDiaStart }) {
       steps: [
         { id: 'am-cleanse', productId: 'dokdo', title: 'Round Lab Dokdo cleanser', detail: 'Alone in the morning. Low pH, no stripping.' },
         { id: 'am-vitc', productId: 'vitaminC', title: 'Dr. Althea Vitamin C serum', detail: 'Morning only — never alongside the night actives.', badge: 'AM only' },
-        { id: 'am-torriden', productId: 'torridenSerum', title: 'Torriden Dive-In serum', detail: 'Hydration layer, before moisturizer.' },
+        { id: 'am-torriden', productId: 'torridenSerum', title: 'Torriden Dive-In HA serum', detail: 'The hyaluronic acid one. Hydration layer, before moisturizer.' },
         { id: 'am-aestura', productId: 'aestura', title: 'Aestura Atobarrier365 lotion', detail: 'Ceramide barrier. Lotion weight, right for oily skin.' },
         outdoor
           ? {
@@ -111,7 +111,7 @@ export function buildDay({ date, phaseId, outdoor, pureDiaStart }) {
               id: 'am-spf',
               productId: 'skin1004Sun',
               title: 'SKIN1004 Hyalu-Cica sun serum',
-              detail: 'Two finger-lengths, face and neck. Torriden sun cream if you want the rotation.',
+              detail: 'Two finger-lengths, face and neck. Torriden Dive-In Sun Cream — the SPF one — if you want the rotation.',
               badge: 'Every morning'
             }
       ]
@@ -156,7 +156,7 @@ export function buildDay({ date, phaseId, outdoor, pureDiaStart }) {
       ? { id: 'pm-active', productId: 'retinol', title: 'COSRX Retinol 0.1', detail: 'Thin layer on dry skin. Flaking or stinging → drop to one active night for two weeks.', badge: 'Active' }
       : active === 'abibPads'
       ? { id: 'pm-active', productId: 'abibPads', title: 'Abib Green LHA pore pad', detail: 'Embossed side to wipe, smooth side to pat.', badge: 'Active' }
-      : { id: 'pm-active', productId: 'rejuran', title: 'Rejuran Turnover ampoule', detail: isCalmNight(d) ? 'Calm night — barrier recovery before the weekend sun.' : 'PDNR repair night between the stronger actives.', badge: 'PDRN' }
+      : { id: 'pm-active', productId: 'rejuran', title: 'Rejuran Turnover ampoule', detail: isCalmNight(d) ? 'Calm night — barrier recovery before the weekend sun.' : 'PDRN repair night between the stronger actives.', badge: 'PDRN' }
 
   const pm = [
     {
@@ -174,7 +174,7 @@ export function buildDay({ date, phaseId, outdoor, pureDiaStart }) {
         },
         { id: 'pm-cleanse-2', productId: 'dokdo', title: 'Round Lab Dokdo cleanser', detail: "Second cleanse. Never skip — oil alone doesn't remove sunscreen.", badge: 'Second cleanse' },
         faceActiveStep,
-        { id: 'pm-torriden', productId: 'torridenSerum', title: 'Torriden Dive-In serum', detail: 'After the active, before moisturizer.' },
+        { id: 'pm-torriden', productId: 'torridenSerum', title: 'Torriden Dive-In HA serum', detail: 'The hyaluronic acid one, not the sun cream. After the active, before moisturizer.', badge: 'No SPF' },
         { id: 'pm-aestura', productId: 'aestura', title: 'Aestura Atobarrier365 lotion', detail: 'Last face step.' }
       ]
     },

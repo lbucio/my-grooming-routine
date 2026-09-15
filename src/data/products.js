@@ -50,12 +50,13 @@ export const PRODUCTS = {
   torridenSerum: {
     id: 'torridenSerum',
     name: 'Torriden Dive-In Serum',
-    sub: 'Low Molecular Hyaluronic Acid',
+    sub: 'Low Molecular Hyaluronic Acid — no SPF',
     korean: '토리든 다이브인 세럼',
     brand: 'Torriden',
     group: 'Face — treat',
     what: 'Lightweight hydrating serum. #1 selling skincare item at Olive Young.',
-    use: 'AM and PM, after any active, before moisturizer.'
+    use: 'AM and PM, after any active, before moisturizer.',
+    notes: ['Not the Dive-In Sun Cream. Torriden sells both under the Dive-In name — this one has no sunscreen in it and is the one your night routine calls for.']
   },
 
   // ---------- FACE — cleanse ----------
@@ -111,10 +112,12 @@ export const PRODUCTS = {
   torridenSun: {
     id: 'torridenSun',
     name: 'Torriden Dive-In Sun Cream',
+    sub: 'SPF — mornings only',
     brand: 'Torriden',
     group: 'Face — protect',
     what: 'Chemical SPF, semi-matte. Built for hot weather and oily skin.',
-    use: 'Rotation / backup for the SKIN1004.'
+    use: 'Rotation / backup for the SKIN1004. Morning only — never a night step.',
+    notes: ['Not the Dive-In HA Serum. Same product line, different job.']
   },
   lrp: {
     id: 'lrp',

@@ -81,9 +81,13 @@ export default function DailyView({
           <span className="outdoor__text">
             <span className="outdoor__title">{outdoor ? 'Outdoors today' : 'Office day'}</span>
             <span className="outdoor__note">
-              {outdoor
-                ? 'La Roche-Posay instead of the SKIN1004, birch stick on the shins, BoJ stick every 2 hours, oil first cleanse tonight.'
-                : 'SKIN1004 sun serum — sunscreen every morning, indoors or out. Tap if you will be in the sun.'}
+              {part === 'am'
+                ? outdoor
+                  ? 'La Roche-Posay instead of the SKIN1004, birch stick on the shins, BoJ stick every 2 hours.'
+                  : 'SKIN1004 sun serum — sunscreen every morning, indoors or out. Tap if you will be in the sun.'
+                : outdoor
+                ? 'Sun today, so tonight starts with the Gokujyun oil to get that sunscreen off. No SPF at night.'
+                : 'Tonight starts with the oil or the balm, your call. Tap if you were in the sun today.'}
             </span>
           </span>
           <span className={`switch${outdoor ? ' switch--on' : ''}`} aria-hidden="true" />
