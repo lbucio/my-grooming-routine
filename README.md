@@ -63,21 +63,59 @@ The hair mask is Sun and Thu, capped at 2 because the leave-in is protein too.
 Move to **Month 2+** after four weeks with no irritation. Switch to **Sensitive** on
 redness or peeling, hold it two weeks, then go back.
 
-## A note on storage
+## Storage
 
-You asked for session storage. `src/lib/storage.js` defaults to **localStorage**
-instead, because `sessionStorage` is wiped the moment the Safari tab closes and iOS
-discards background tabs aggressively — the morning's checks and the outdoor days
-flagged for next week would be gone by evening, which defeats the point of the app.
+Everything is per-device and client-side; there is no backend and no account.
+`src/lib/storage.js` is the only module that touches persistence, so swapping the
+backend means changing that one file.
 
-One constant at the top of that file switches it back:
+**Today: localStorage.** Survives tab closes, reboots and app updates. Capacity is
+~5MB per origin, which this app will never approach — a year of daily checks is well
+under 200KB. It is per-device and per-browser: Safari on the phone and Chrome on a
+laptop are separate stores, and Safari evicts it after ~7 days of no visits unless the
+app is installed to the Home Screen. Install it and that eviction rule doesn't apply.
+
+**sessionStorage** — what was originally asked for. Same API, but scoped to one tab and
+cleared when that tab closes, which iOS does aggressively to background tabs. Flip the
+constant at the top of `storage.js` to use it:
 
 ```js
 const BACKEND = 'local' // 'local' | 'session'
 ```
 
-Everything else goes through that module, so nothing else has to change. It falls back
-to in-memory storage if the browser blocks both (Safari private mode).
+### If the current backend stops being enough
+
+| Option | Gets you | Costs |
+|---|---|---|
+| **IndexedDB** (via `idb-keyval`) | Async, no 5MB ceiling, structured queries | Still one device. Worth it only for photos — progress shots of legs or skin over the 4–8 week window |
+| **Export / import JSON** | A file you can AirDrop to a new phone, and a backup | Manual. ~30 lines: serialize the same keys, download and re-read them |
+| **iCloud / File-based sync** | Automatic backup across your own Apple devices | Needs a real app (Swift, or Capacitor wrapping this) — not reachable from a web page |
+| **Cloud DB** (Supabase, Firebase) | Real multi-device sync, history that outlives the phone | An account, a login screen, a schema, and your routine data on someone else's server |
+
+The honest read for this app: localStorage plus a JSON export covers everything short of
+wanting the same checkmarks on a second device. Reach for a cloud DB only when you
+actually want the history to survive losing the phone.
+
+## Deploying
+
+`.github/workflows/deploy.yml` builds on every push and publishes `dist/` to GitHub
+Pages. Two one-time settings changes are needed before the first run can succeed:
+
+1. **Settings → General → Danger Zone → Change visibility → Public.**
+   Pages is not available for private repositories on the free plan.
+2. **Settings → Pages → Source → GitHub Actions.**
+
+The second step can't be automated: creating a Pages site through the API needs
+`administration: write`, and the default `GITHUB_TOKEN` cannot be granted that, so
+`configure-pages` with `enablement: true` fails with "Resource not accessible by
+integration".
+
+After both, push anything (or re-run the workflow) and it deploys to
+`https://lbucio.github.io/my-grooming-routine/`.
+
+Making the repository public exposes the code and the product list. It does not expose
+anything you check off — that stays in your browser's own storage and never leaves the
+device.
 
 ## Layout
 
