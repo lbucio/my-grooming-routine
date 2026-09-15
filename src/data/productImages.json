@@ -1,11 +1,16 @@
 {
+  "abibPads": "abibPads.webp",
   "aestura": "aestura.webp",
   "aesturaLegs": "aesturaLegs.webp",
+  "birchStick": "birchStick.webp",
   "bodyCleanser": "bodyCleanser.webp",
+  "bodyMist": "bodyMist.webp",
   "dokdo": "dokdo.webp",
   "euthymol": "euthymol.webp",
   "gokujyunOil": "gokujyunOil.webp",
   "miseEnScene": "miseEnScene.webp",
   "rejuran": "rejuran.webp",
-  "unoveLeaveIn": "unoveLeaveIn.webp"
+  "skin1004Sun": "skin1004Sun.webp",
+  "unoveLeaveIn": "unoveLeaveIn.webp",
+  "vitaminC": "vitaminC.webp"
 }
