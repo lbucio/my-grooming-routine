@@ -55,13 +55,17 @@ export const PRODUCTS = {
     id: 'torridenSerum',
     code: 'TD',
     name: 'Torriden Dive-In Serum',
-    sub: 'Low Molecular Hyaluronic Acid — no SPF',
+    sub: 'Not in the haul — the routine skips it',
+    owned: false,
     korean: '토리든 다이브인 세럼',
     brand: 'Torriden',
     group: 'Face — treat',
     what: 'Lightweight hydrating serum. #1 selling skincare item at Olive Young.',
-    use: 'AM and PM, after any active, before moisturizer.',
-    notes: ['Not the Dive-In Sun Cream. Torriden sells both under the Dive-In name — this one has no sunscreen in it and is the one your night routine calls for.']
+    use: 'Would sit AM and PM after any active, before moisturizer — if you had it.',
+    notes: [
+      "You own the Dive-In Sun Cream, not this. Torriden sells both under the Dive-In name, which is exactly what made the night routine look like it contained sunscreen.",
+      'Until you buy it, the Aestura lotion goes on damp skin and carries the hydration on its own.'
+    ]
   },
 
   // ---------- FACE — cleanse ----------

@@ -42,6 +42,17 @@ view. A flagged day changes four things:
 | Midday | — | BoJ matte stick, every 2 hours |
 | Night first cleanse | Oil or balm, your call | Gokujyun oil (heavy sunscreen) |
 
+## What is not in the haul
+
+The Torriden **Dive-In Serum** (hyaluronic acid) is listed in the product notes but
+was never actually bought — only the Torriden **Dive-In Sun Cream** was. The routine
+therefore has no separate hydrating serum step: the Aestura lotion goes onto skin still
+damp from cleansing and carries the hydration itself.
+
+The serum stays in the Products list flagged "Don't own it", so if it ever gets bought
+the step can come back. Set `owned` back to true in `src/data/products.js` and re-add
+the `am-torriden` / `pm-torriden` steps in `src/data/schedule.js`.
+
 ## Face active schedule
 
 Three phases, switched from the week view. Friday and Saturday nights stay calm in all
