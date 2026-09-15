@@ -101,10 +101,19 @@ actually want the history to survive losing the phone.
 `.github/workflows/deploy.yml` builds on every push and publishes `dist/` to GitHub
 Pages at `https://lbucio.github.io/my-grooming-routine/`.
 
-`configure-pages` runs with `enablement: true`, so it provisions the Pages site itself
-on the first run and there is no settings step. This only works because the repository
-is public — Pages is unavailable on private repositories on the free plan, and the
-create call there is rejected as "Resource not accessible by integration".
+One one-time step is needed before the first run can succeed:
+**Settings → Pages → Source → GitHub Actions.**
+
+This cannot be automated. `configure-pages` with `enablement: true` calls the
+create-Pages-site endpoint, which the default `GITHUB_TOKEN` is not permitted to use;
+it fails with "Resource not accessible by integration" whether the repository is public
+or private. Creating the site needs `administration: write`, which no `permissions:`
+block can grant — only a PAT or a GitHub App token can.
+
+The repository also has to be public, since Pages is unavailable for private
+repositories on the free plan. Making it public exposes the code and the product list.
+It does not expose anything you check off — that stays in your browser's own storage and
+never leaves the device.
 
 Making the repository public exposes the code and the product list. It does not expose
 anything you check off — that stays in your browser's own storage and never leaves the
