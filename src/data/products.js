@@ -297,6 +297,7 @@ export const PRODUCTS = {
   diffuser: {
     id: 'diffuser',
     code: 'DF',
+    amount: '20–30 seconds per section, low heat and low speed. Roughly 10 minutes in total.',
     name: 'Diffuser attachment',
     sub: 'Low heat, low speed',
     group: 'Hair',

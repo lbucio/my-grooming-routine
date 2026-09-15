@@ -317,18 +317,25 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 .step__body { flex: 1; min-width: 0; }
 .step__detail { display: block; }
-/* The dose, where getting it wrong costs something. */
+/* Every step carries its dose. The ones where the wrong amount actually costs
+   something — irritation from too much, lost SPF from too little — keep the
+   accent so they still stand out in a list where everything is measured. */
 .step__amount {
   display: block;
   margin-top: 5px;
   padding-left: 9px;
-  border-left: 2px solid var(--accent);
+  border-left: 2px solid var(--line-strong);
   font-size: 12.5px;
   line-height: 1.4;
-  font-weight: 600;
-  color: var(--accent);
+  color: var(--text-2);
 }
-.step--done .step__amount { color: var(--text-3); border-left-color: var(--line-strong); font-weight: 400; }
+.step__amount--key { border-left-color: var(--accent); color: var(--accent); font-weight: 600; }
+.step--done .step__amount,
+.step--done .step__amount--key {
+  color: var(--text-3);
+  border-left-color: var(--line);
+  font-weight: 400;
+}
 .step__top { display: flex; align-items: center; gap: 7px; flex-wrap: wrap; }
 .step__title { font-size: 15.5px; font-weight: 600; letter-spacing: -0.01em; line-height: 1.3; }
 .step--done .step__title { color: var(--text-3); text-decoration: line-through; }

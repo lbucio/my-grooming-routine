@@ -42,8 +42,12 @@ export default function StepList({ groups, isDone, onToggle, onOpenProduct }) {
                         {step.optional && <span className="step__opt">{step.optionalNote || 'optional'}</span>}
                       </span>
                       <span className="step__detail">{step.detail}</span>
-                      {PRODUCTS[step.productId]?.doseSensitive && (
-                        <span className="step__amount">{PRODUCTS[step.productId].amount}</span>
+                      {PRODUCTS[step.productId]?.amount && (
+                        <span
+                          className={`step__amount${PRODUCTS[step.productId].doseSensitive ? ' step__amount--key' : ''}`}
+                        >
+                          {PRODUCTS[step.productId].amount}
+                        </span>
                       )}
                     </span>
                   </button>
