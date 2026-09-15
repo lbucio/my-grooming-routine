@@ -7,13 +7,28 @@ export const PRODUCTS = {
     id: 'rejuran',
     code: 'RJ',
     name: 'Rejuran Turnover Ampoule',
-    sub: 'Gold',
+    sub: 'Dual Effect · DOT Dual PDRN · 10ml + 5ml',
     korean: '리쥬란 턴오버 앰플',
     brand: 'Rejuran',
     group: 'Face — treat',
     what: 'PDRN ampoule (salmon-DNA-derived). Repair, firmness, barrier.',
     use: 'PM, after cleansing, before Torriden. Gentle — goes on the nights between retinol and pads.',
     notes: ['Pioneered PDRN in Korean clinics.']
+  },
+  poreAmpoule: {
+    id: 'poreAmpoule',
+    code: 'RP',
+    name: 'Rejuran Pore Tightening Ampoule',
+    sub: 'PDRx 5% · c-PDRN 0.5%',
+    brand: 'Rejuran',
+    group: 'Face — treat',
+    what: 'PDRN ampoule aimed at pore appearance rather than general repair. Same family as the Turnover ampoule, higher PDRx.',
+    use: 'PM, in place of the Turnover ampoule on a PDRN night. Nose and cheeks rather than the whole face.',
+    notes: [
+      'Not a second active — PDRN is repair, not exfoliation, so it breaks no rule by sitting in the Turnover ampoule\'s slot.',
+      'Small bottle. Swapping it in on some PDRN nights makes it last; adding it as a nightly extra step does not.',
+      'Wednesday is the natural night for it — the Abib pads clear the pore on Tuesday, this follows the next night.'
+    ]
   },
   retinol: {
     id: 'retinol',

@@ -155,7 +155,11 @@ export function buildDay({ date, phaseId, outdoor, pureDiaStart }) {
       ? { id: 'pm-active', productId: 'retinol', title: 'COSRX Retinol 0.1', detail: 'Thin layer on DRY skin — wait until the cleanse has fully dried. Flaking or stinging → a thin layer of Aestura first, then the retinol over it.', badge: 'Active' }
       : active === 'abibPads'
       ? { id: 'pm-active', productId: 'abibPads', title: 'Abib Green LHA pore pad', detail: 'Embossed side to wipe, smooth side to pat.', badge: 'Active' }
-      : { id: 'pm-active', productId: 'rejuran', title: 'Rejuran Turnover ampoule', detail: isCalmNight(d) ? 'Calm night — barrier recovery before the weekend sun.' : 'PDRN repair night between the stronger actives.', badge: 'PDRN' }
+      : { id: 'pm-active', productId: 'rejuran', title: 'Rejuran Turnover ampoule', detail: isCalmNight(d)
+            ? 'Calm night — barrier recovery before the weekend sun.'
+            : d === 3
+            ? 'PDRN repair night. Good night to swap in the Pore Tightening ampoule instead — the pads cleared the pores last night.'
+            : 'PDRN repair night between the stronger actives. The Pore Tightening ampoule can take this slot instead.', badge: 'PDRN' }
 
   const pm = [
     {
